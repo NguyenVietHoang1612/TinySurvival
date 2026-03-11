@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c79f2db7c9daea04481587dccc5fdd76, type: 3}
+  m_Name: PitchForkStone
+  m_EditorClassIdentifier: 
+  id: 13
+  name: PitchForkStone
+  itemIcon: {fileID: -4237968333221575948, guid: 0cb4972e36b7c5247b891549abd6e973, type: 3}
+  itemType: 1
+  itemdescription: Pitch Fork Stone
+  stackSize: 25
+  isStackable: 0
+  toolType: 4
+  speedInteract: 10
+  physicDamage: 4
+  amountTakeAttackdurability: 5
+  visualPrefab: {fileID: 2437492302355136412, guid: 9d49fc6852bb14e40a606a577e18f5b1, type: 3}
+  layerTarget:
+    serializedVersion: 2
+    m_Bits: 512

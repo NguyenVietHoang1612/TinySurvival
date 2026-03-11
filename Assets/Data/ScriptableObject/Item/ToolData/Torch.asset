@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c79f2db7c9daea04481587dccc5fdd76, type: 3}
+  m_Name: Torch
+  m_EditorClassIdentifier: 
+  id: 15
+  name: "\u0110u\u1ED1c"
+  itemIcon: {fileID: 1476207771918713440, guid: 1412fe6214a3ff949905ae8efe47cd10, type: 3}
+  itemType: 1
+  itemdescription: "C\xE2y \u0111u\u1ED1c c\xF3 th\u1EC3 chi\u1EBFu s\xE1ng."
+  stackSize: 1
+  isStackable: 0
+  toolType: 5
+  speedInteract: 0
+  physicDamage: 0
+  amountTakeAttackdurability: 0
+  visualPrefab: {fileID: 2437492302355136412, guid: f0fc2c58137ee6a43a46515bcebfe3a3, type: 3}
+  layerTarget:
+    serializedVersion: 2
+    m_Bits: 0

@@ -1,0 +1,41 @@
+.subTitle {
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    -unity-font-definition: url("project://database/Assets/art/Tiny%20Swords%20(Update%20010)/Font/Jersey20-Regular.ttf?fileID=12800000&guid=54a04b49c29acb740a7023a0b55842c2&type=3#Jersey20-Regular");
+    -unity-font-style: normal;
+}
+
+.button:hover {
+    font-size: 24px;
+    transition-duration: 0.3s;
+    scale: 1.1 1.1;
+}
+
+.title {
+    -unity-font-definition: url("project://database/Assets/art/Tiny%20Swords%20(Update%20010)/Font/Jersey20-Regular.ttf?fileID=12800000&guid=54a04b49c29acb740a7023a0b55842c2&type=3#Jersey20-Regular");
+    font-size: 46px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+}
+
+.button {
+    font-size: 16px;
+    padding-left: 32px;
+    position: relative;
+    bottom: auto;
+    top: auto;
+    left: 0;
+    right: auto;
+}
+
+.button {
+    font-size: 16px;
+    padding-left: 32px;
+    position: relative;
+    bottom: auto;
+    top: auto;
+    left: 0;
+    right: auto;
+    text-shadow: 0 3px 16px rgb(0, 0, 0);
+    -unity-text-outline-color: rgba(32, 0, 0, 0);
+}

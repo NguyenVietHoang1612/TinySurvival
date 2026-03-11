@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b14da321784dc643ad1824b58ae56f6, type: 3}
+  m_Name: Gold
+  m_EditorClassIdentifier: 
+  id: 2
+  name: Gold
+  itemIcon: {fileID: -115678063975355559, guid: 0e755878d33eb334dba40442c6cf6204, type: 3}
+  itemType: 2
+  itemdescription: Gold
+  stackSize: 25
+  isStackable: 1
+  healAmount: 11
+  isEat: 0
+  maxDurability: 10

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b14da321784dc643ad1824b58ae56f6, type: 3}
+  m_Name: MushroomRed
+  m_EditorClassIdentifier: 
+  id: 5
+  name: MushroomRed
+  itemIcon: {fileID: 8793915729297761979, guid: f32ce43a37c65024191b8e696a444911, type: 3}
+  itemType: 2
+  itemdescription: Mushroom Red
+  stackSize: 25
+  isStackable: 1
+  healAmount: -5
+  isEat: 1
+  maxDurability: 10

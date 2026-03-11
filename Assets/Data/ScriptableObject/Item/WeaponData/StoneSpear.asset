@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3451432c0b21bca42a80988d279b9742, type: 3}
+  m_Name: StoneSpear
+  m_EditorClassIdentifier: 
+  id: 18
+  name: StoneSpear
+  itemIcon: {fileID: -3184280925824960035, guid: c673561747dc7d64d9cdcecf8ef7bf71, type: 3}
+  itemType: 0
+  itemdescription: StoneSpear
+  stackSize: 1
+  isStackable: 0
+  physicDamage: 15
+  magicDamage: 0
+  amountTakeAttackdurability: 10
+  maxDurability: 100
+  visualPrefab: {fileID: 2437492302355136412, guid: c2f0c3f25fdd0744285876321d053ade, type: 3}

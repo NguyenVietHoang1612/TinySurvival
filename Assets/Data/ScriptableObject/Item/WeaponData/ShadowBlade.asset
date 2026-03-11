@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3451432c0b21bca42a80988d279b9742, type: 3}
+  m_Name: ShadowBlade
+  m_EditorClassIdentifier: 
+  id: 16
+  name: ShadowBlade
+  itemIcon: {fileID: -5183553784212632798, guid: 29be841e3efeb72468f7e1dcdda8c6b0, type: 3}
+  itemType: 0
+  itemdescription: 'Shadow Blade
+
+'
+  stackSize: 1
+  isStackable: 0
+  physicDamage: 0
+  magicDamage: 0
+  amountTakeAttackdurability: 0
+  maxDurability: 100
+  visualPrefab: {fileID: 0}

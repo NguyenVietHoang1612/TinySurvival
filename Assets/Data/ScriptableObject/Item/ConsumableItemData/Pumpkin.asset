@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b14da321784dc643ad1824b58ae56f6, type: 3}
+  m_Name: Pumpkin
+  m_EditorClassIdentifier: 
+  id: 6
+  name: Pumpkin
+  itemIcon: {fileID: 8389134475083476877, guid: 2d1c11b58a13d3c47955cd2799c7acfd, type: 3}
+  itemType: 2
+  itemdescription: Pumpkin
+  stackSize: 15
+  isStackable: 1
+  healAmount: 10
+  isEat: 1
+  maxDurability: 10

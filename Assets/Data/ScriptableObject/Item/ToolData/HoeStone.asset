@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c79f2db7c9daea04481587dccc5fdd76, type: 3}
+  m_Name: HoeStone
+  m_EditorClassIdentifier: 
+  id: 11
+  name: "Cu\u1ED1c \u0111\xE1"
+  itemIcon: {fileID: 8384852087000020349, guid: e73a16aa43da3114489fef3d3c6e646d, type: 3}
+  itemType: 1
+  itemdescription: "Cu\u1ED1c d\xF9ng \u0111\u1EC3 \u0111\xE0o \u0111\xE1."
+  stackSize: 1
+  isStackable: 0
+  toolType: 1
+  speedInteract: 10
+  physicDamage: 6
+  amountTakeAttackdurability: 5
+  visualPrefab: {fileID: 2437492302355136412, guid: e64e9c9aa59b9ca458d274b802541d88, type: 3}
+  layerTarget:
+    serializedVersion: 2
+    m_Bits: 256

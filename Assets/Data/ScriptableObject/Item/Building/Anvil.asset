@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c326eee7cf48e4c9fc79b43a17b7d6, type: 3}
+  m_Name: Anvil
+  m_EditorClassIdentifier: 
+  id: 19
+  name: Anvil
+  itemIcon: {fileID: 21300000, guid: fa548ac04b8f50e47ac547772e1acc7b, type: 3}
+  itemType: 3
+  itemdescription: "C\xE1i \u0111e d\xF9ng \u0111\u1EC3 ch\u1EBF t\u1EA1o v\u0169
+    kh\xED"
+  stackSize: 25
+  isStackable: 0
+  size: {x: 1, y: 1}
+  prefab: {fileID: 863095628861789157, guid: d40f5d24c5ffc6b4590377459a869ab0, type: 3}

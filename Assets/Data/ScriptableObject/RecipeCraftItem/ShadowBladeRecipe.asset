@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c772d08f8226e4685052f82177ac44, type: 3}
+  m_Name: ShadowBladeRecipe
+  m_EditorClassIdentifier: 
+  recipeName: ShadowBladeRecipe
+  resultItem: {fileID: 11400000, guid: a9bf2889cd8648341ae82f67296c5ba1, type: 2}
+  amountItemResult: 1
+  stationTag: 1
+  ingredients:
+  - item: {fileID: 11400000, guid: 13e7810e297ddd943903e90d480a8f11, type: 2}
+    amount: 3
+  - item: {fileID: 11400000, guid: dc6cf3b9148f5634b9eabb9775457444, type: 2}
+    amount: 3
+  - item: {fileID: 11400000, guid: caa86f15606c36b469550a5275ae6db4, type: 2}
+    amount: 3
