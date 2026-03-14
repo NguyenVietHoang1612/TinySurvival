@@ -6,6 +6,8 @@ namespace GameRPG
     public class BaseStatsCharacter : ScriptableObject
     {
         public int baseHealth;
+        public int baseHunger;
+        public float baseHungerDecreaseRate;
         public int baseDamage;
         public int baseArmor;
         public int baseMagicDamage;

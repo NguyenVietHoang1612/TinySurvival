@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5653683346203037992}
   - component: {fileID: 7044421578025986426}
   m_Layer: 0
-  m_Name: AxeVisual
+  m_Name: AxeStoneVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4586550030028859624, guid: 3f8e8ce2bb6ae6c4c816b5a29c2a8ffc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62f5a685cb3004b42b28b2dd00f41bf8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -158,7 +158,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7567568, y: 0.8648649}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 0.7567568, y: 0.8648649}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

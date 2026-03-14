@@ -67,7 +67,6 @@ namespace GameRPG
             if (this.item_SO != null)
             {
                 UpdateAppearance();
-                canPickUp = false;
                 sp.gameObject.SetActive(false);
                 sp.gameObject.SetActive(true);
             }

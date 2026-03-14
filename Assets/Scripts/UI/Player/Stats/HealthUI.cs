@@ -5,8 +5,8 @@ namespace GameRPG
 {
     public class HealthUI : MonoBehaviour
     {
-        public TMP_Text healthText;
-        public Animator anim;
+        private TMP_Text healthText;
+        public Animator anim { get; private set; }
 
 
         private void Awake()

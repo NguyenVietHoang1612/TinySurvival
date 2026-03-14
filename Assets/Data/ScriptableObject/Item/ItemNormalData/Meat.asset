@@ -19,6 +19,6 @@ MonoBehaviour:
   itemdescription: 'Meat '
   stackSize: 25
   isStackable: 1
-  healAmount: 15
+  healAmount: -5
+  hungerAmount: 15
   isEat: 1
-  maxDurability: 10

@@ -59,7 +59,7 @@ namespace GameRPG
             currentPlayerData.maxHealth = 15;
             currentPlayerData.currentExp = 0;
             currentPlayerData.positionPlayer = new float[3] { 0f, 0f, 0f };
-            currentPlayerData.slots = new InventorySlot[12];
+            currentPlayerData.slots = new InventorySlotData[12];
 
             SaveGame();
             StartCoroutine(LoadWorldSceneAndApplyData());

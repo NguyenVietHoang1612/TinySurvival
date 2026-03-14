@@ -19,9 +19,16 @@ namespace GameRPG
         private Player player;
 
         private int currentDurability;
+
         private int currentQuantity;
+        public int Quantity
+        {
+            get => currentQuantity;
+            private set => currentQuantity = value;
+        }
 
         public static event Action<BuildingData> OnBuildingItemClicked;
+        public static event Action<ConsumableData> OnEatConsumableItem;
 
         private void Start()
         {
@@ -44,7 +51,8 @@ namespace GameRPG
 
                 if (item_SO.itemType == ItemType.ConsumableCraftItem)
                 {
-                    Debug.Log("Su dung Item");
+                    OnEatConsumableItem?.Invoke(item_SO as ConsumableData);
+                    inventoryManager.RemoveItem(item_SO, 1);
                     return;
                 }
                 else if (item_SO.itemType == ItemType.Building)
@@ -134,11 +142,7 @@ namespace GameRPG
             item_SO = item;
         }
 
-        public int Quantity
-        {
-            get => currentQuantity;
-            private set => currentQuantity = value;
-        }
+
 
         public void SetQuantity(int quantity)
         {

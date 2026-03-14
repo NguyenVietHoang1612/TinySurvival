@@ -12,14 +12,14 @@ namespace GameRPG
         public int maxHealth;
         public int currentExp;
 
-        public InventorySlot[] slots = new InventorySlot[12];
+        public InventorySlotData[] slots = new InventorySlotData[12];
         public List<ItemDroppedData> itemsData;
 
         public float[] positionPlayer;
     }
 
     [Serializable]
-    public class InventorySlot
+    public class InventorySlotData
     {
         public int iD;
         public Item_SO item;

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: BaseCharacter
   m_EditorClassIdentifier: 
   baseHealth: 150
+  baseHunger: 100
+  baseHungerDecreaseRate: 0.1
   baseDamage: 10
   baseArmor: 10
   baseMagicDamage: 0

@@ -12,21 +12,30 @@ namespace GameRPG
         [SerializeField] EquipmentManager equipmentManager;
         [SerializeField] private BaseStatsCharacter characterStats;
 
-        [Header("Base Stats")]
-        [SerializeField] private int baseHealth;
-        [SerializeField] private int baseDamage;
-        [SerializeField] private int baseArmor;
-        [SerializeField] private int baseMagicDamage;
-        [SerializeField] private int baseSpeedInteract;
-        [SerializeField] private float baseMovementSpeed;
+        [Header("Base Stats Survival")]
+        private int baseHealth;
+        private int baseHunger;
+        private float baseHungerDecreaseRate;
+        private float baseRateTimeHunger = 780f;
+
+        [Header("Base Stats Action")]
+        private int baseDamage;
+        private int baseArmor;
+        private int baseMagicDamage;
+        private int baseSpeedInteract;
+        private float baseMovementSpeed;
 
         [Header("Current Stats")]
         [SerializeField] private int currentHealth;
+        [SerializeField] private float currentHunger;
         [SerializeField] private int currentPhysicDamage;
         [SerializeField] private int currentMagicDamage;
         [SerializeField] private int currentArmor;
         [SerializeField] private int currentSpeedInteract;
         [SerializeField] private float currentMovementSpeed;
+
+        private float decrementHungerTimer;
+        [SerializeField] private float decrementHungerInterval = 1f;
 
         public static event Action<int, int> OnHealthChange;
 
@@ -62,12 +71,14 @@ namespace GameRPG
                 return;
             }
 
-
             baseHealth = characterStats.baseHealth;
+            baseHunger = characterStats.baseHunger;
+            baseHungerDecreaseRate = characterStats.baseHungerDecreaseRate;
+            currentHunger = baseHunger;
             currentHealth = baseHealth;
             
-
-            playerUIHubManager.healthUI.SetHealthValue(currentHealth, baseHealth);
+            playerUIHubManager.HealthUI.SetHealthValue(currentHealth, baseHealth);
+            playerUIHubManager.HungerUI.SetMaxHungerValue(baseHunger);
 
             baseDamage = characterStats.baseDamage;
             baseArmor = characterStats.baseArmor;
@@ -76,15 +87,66 @@ namespace GameRPG
             baseMovementSpeed = characterStats.baseMovementSpeed;
 
             equipmentManager.OnEquipmentChange += UpdateStats;
+
             UpdateStats();
         }
+        private void OnEnable()
+        {
+            InventorySlots.OnEatConsumableItem += IncreaseStatWhenEat;
+        }
+
+        private void OnDisable()
+        {
+            InventorySlots.OnEatConsumableItem -= IncreaseStatWhenEat;
+        }
+        private void Update()
+        {
+            UpdateHungerOnTime();
+        }
+
+        public void UpdateHungerOnTime()
+        {
+            float reductionPerSecond = baseHunger / baseRateTimeHunger;
+            float amountToDecrease = reductionPerSecond * baseHungerDecreaseRate * Time.deltaTime;
+
+            float oldHunger = currentHunger;
+            currentHunger = Mathf.Max(currentHunger - amountToDecrease, 0);
+
+            if (Mathf.Abs(oldHunger - currentHunger) > 1f)
+            {
+                playerUIHubManager.HungerUI.SetCurrentHungerValue(currentHunger);
+            }
+
+            if (currentHunger <= 0)
+            {
+                decrementHungerTimer += Time.deltaTime;
+                if (decrementHungerTimer >= decrementHungerInterval)
+                {
+                    decrementHungerTimer = 0;
+                    TakeDamage(1);
+                }
+            }
+        }
+
+        public void IncreaseStatWhenEat(ConsumableData consumable)
+        {
+            currentHunger += consumable.hungerAmount;
+            currentHealth += consumable.healAmount;
+
+            currentHealth = Mathf.Min(currentHealth, baseHealth);
+            currentHunger = Mathf.Min(currentHunger, baseHunger);
+            playerUIHubManager.HungerUI.SetCurrentHungerValue(currentHunger);
+            playerUIHubManager.HungerUI.PlayHungerAnimation();
+            playerUIHubManager.HealthUI.SetHealthValue(currentHealth, baseHealth);
+        }
+
 
         public void TakeDamage(int amout)
         {
             Debug.Log("Take damge: " + amout);
             currentHealth -= CalculateTheAmountOfArmor(amout);
-            playerUIHubManager.healthUI.anim.Play("TextUpdate");
-            playerUIHubManager.healthUI.SetHealthValue(currentHealth, baseHealth);
+            playerUIHubManager.HealthUI.anim.Play("TextUpdate");
+            playerUIHubManager.HealthUI.SetHealthValue(currentHealth, baseHealth);
             player.Anim.SetTrigger("TakeDamage");
             if (currentHealth <= 0)
             {
@@ -94,6 +156,14 @@ namespace GameRPG
 
         }
 
+        public void Die()
+        {
+            player.SetColliderDisable();
+            player.Anim.SetBool("IsDead", true);
+            PlayerInputManager.Instance.DisablePlayerController();
+
+            StartCoroutine(SetGameObjectWhenDie());
+        }
         private int CalculateTheAmountOfArmor(int amout)
         {
             int totalDamage = amout - currentArmor;
@@ -102,15 +172,6 @@ namespace GameRPG
 
 
             return totalDamage;
-        }
-
-        public void Die()
-        {
-            player.SetColliderDisable();
-            player.Anim.SetBool("IsDead", true);
-            PlayerInputManager.Instance.DisablePlayerController();
-
-            StartCoroutine(SetGameObjectWhenDie());
         }
 
         private IEnumerator SetGameObjectWhenDie()
@@ -159,12 +220,12 @@ namespace GameRPG
         public void UpdateMaxHealth(float amount)
         {
             baseHealth = Mathf.RoundToInt(baseHealth + (baseHealth * amount));
-            playerUIHubManager.healthUI.SetHealthValue(currentHealth, baseHealth);
+            playerUIHubManager.HealthUI.SetHealthValue(currentHealth, baseHealth);
         }
 
         public void RefreshStatUI()
         {
-            playerUIHubManager.healthUI.SetHealthValue(currentHealth, baseHealth);
+            playerUIHubManager.HealthUI.SetHealthValue(currentHealth, baseHealth);
         }
        
 
@@ -179,7 +240,7 @@ namespace GameRPG
         {
             this.currentHealth = currentHealth;
             this.baseHealth = maxHealth;
-            playerUIHubManager.healthUI.SetHealthValue(currentHealth, maxHealth);
+            playerUIHubManager.HealthUI.SetHealthValue(currentHealth, maxHealth);
         }
 
     }

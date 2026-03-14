@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c79f2db7c9daea04481587dccc5fdd76, type: 3}
-  m_Name: Axe
+  m_Name: AxeStone
   m_EditorClassIdentifier: 
   id: 10
-  name: "R\xECu "
-  itemIcon: {fileID: 4586550030028859624, guid: 3f8e8ce2bb6ae6c4c816b5a29c2a8ffc, type: 3}
+  name: "R\xECu \u0111\xE1"
+  itemIcon: {fileID: 21300000, guid: 62f5a685cb3004b42b28b2dd00f41bf8, type: 3}
   itemType: 1
-  itemdescription: "R\xECu d\xF9ng \u0111\u1EC3 ch\u1EB7t c\xE2y l\u1EA5y g\u1ED7."
+  itemdescription: "R\xECu \u0111\xE1 d\xF9ng \u0111\u1EC3 ch\u1EB7t c\xE2y l\u1EA5y
+    g\u1ED7."
   stackSize: 1
   isStackable: 0
   toolType: 0
